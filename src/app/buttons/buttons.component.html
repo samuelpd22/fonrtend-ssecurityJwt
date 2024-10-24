@@ -1,0 +1,10 @@
+<nav class="navbar navbar-light">
+    <div class="container-fluid justify-content-center d-flex">
+        <button *ngIf="!isTokenValid()" class="btn btn-primary mx-2" (click)="loginEvent.emit()">
+            Login
+        </button>
+        <button *ngIf="isTokenValid()" class="btn btn-dark mx-2" (click)="logoutEvent.emit()">
+            Sair
+        </button>
+    </div>
+</nav>
