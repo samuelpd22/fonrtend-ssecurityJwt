@@ -1,0 +1,27 @@
+mdb-form-control{
+    margin-bottom: 20px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    z-index: 1000; /* Para ficar acima de outros elementos */
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o card */
+    z-index: 1001; /* Para ficar acima do overlay */
+    width: 500px; /* Ajuste a largura conforme necessário */
+    max-width: 90%; /* Para responsividade em telas menores */
+    height: auto; /* Ajuste a altura conforme necessário */
+    padding: 20px; /* Adiciona um padding interno */
+    background-color: white; /* Define a cor de fundo do container */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao container */
+}

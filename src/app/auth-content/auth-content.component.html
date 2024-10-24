@@ -1,0 +1,76 @@
+<br>
+<div class="row justify-content-md-center">
+    <div class="col-8">
+        <div class="card" style="width: '18rem';">
+            <div class="card-body">
+                <h5 class="card-title">Clientes cadastrados</h5>
+                <br>
+                <div class="row justify-content-md-start">
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary" (click)="toggleForm()">Cadastrar Cliente</button>
+                    </div>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Ações</th> <!-- Coluna para ações -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let produto of produtos">
+                            <td>{{ produto.nome }}</td>
+                            <td>{{ produto.cpf }}</td>
+                            <td>{{ produto.endereco }}</td>
+                            <td>{{ produto.email }}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="deleteProduto(produto.id)">
+                                    <i class="fas fa-trash"></i> <!-- Ícone de lixeira -->
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Formulário que será exibido/ocultado -->
+<div class="overlay" *ngIf="formVisible" (click)="closeForm()"></div>
+<div class="form-container" *ngIf="formVisible" (click)="$event.stopPropagation()">
+    <div class="card" style="width: '18rem';">
+        <div class="card-body">
+            <h5 class="card-title">Cadastrar cliente</h5>
+
+            <mdb-form-control>
+                <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="produtosEdit.nome" autocomplete="off"/>
+                <label mdbLabel class="form-label" for="form1" name="titulo">Nome</label>
+            </mdb-form-control>
+
+            <mdb-form-control>
+                <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="produtosEdit.cpf" autocomplete="off"/>
+                <label mdbLabel class="form-label" for="form1">CPF</label>
+            </mdb-form-control>
+
+            <mdb-form-control>
+                <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="produtosEdit.endereco" autocomplete="off"/>
+                <label mdbLabel class="form-label" for="form1">Endereço</label>
+            </mdb-form-control>
+
+            <mdb-form-control>
+                <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="produtosEdit.email" autocomplete="off"/>
+                <label mdbLabel class="form-label" for="form1">Email</label>
+            </mdb-form-control>
+
+            <button type="button" class="btn btn-primary" (click)="salvarProduto()" mdbRipple>Salvar</button>
+        </div>
+    </div>
+</div>
+<br>
