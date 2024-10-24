@@ -1,0 +1,46 @@
+ <br>
+ <!--<div class="row justify-content-md-center">
+    <div class="col-4">
+        <div class="card" style="width: '18rem';">
+            <div class="card-body">
+                <h5 class="card-title"> Cadastrar produto</h5>
+                <p class="card-text">Content:</p>
+                
+               <mdb-form-control>
+                    <input mdbInput type="text" id="form1" class="form-control" />
+                    <label mdbLabel class="form-label" for="form1" [(ngModel)]="produtosEdit.nome" name="titulo">Nome</label>
+                  </mdb-form-control>
+
+                  <mdb-form-control>
+                    <input mdbInput type="text" id="form1" class="form-control" />
+                    <label mdbLabel class="form-label" for="form1" [(ngModel)]="produtosEdit.imgProduto">Imagem Url</label>
+                  </mdb-form-control>
+
+                  <mdb-form-control>
+                    <input mdbInput type="text" id="form1" class="form-control" />
+                    <label mdbLabel class="form-label" for="form1" [(ngModel)]="produtosEdit.valor">Valor</label>
+                  </mdb-form-control>
+
+                  <button type="button" class="btn btn-primary" (click)="salvarProduto()" mdbRipple>Salvar</button>
+
+
+               
+            </div>
+        </div>
+
+        <div *ngFor="let produto of produtos" class="card">
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{ produto.nome }}</strong></h5>
+            <p class="card-text card-dataEhora"><strong>{{ produto.imgProduto }}</strong></p>
+          </div>
+        </div>
+
+    </div>
+</div> 
+-->
+<div *ngFor="let produto of produtos" class="card">
+  <div class="card-body">
+    <h5 class="card-title"><strong>{{ produto.nome }}</strong></h5>
+    
+  </div>
+</div>
