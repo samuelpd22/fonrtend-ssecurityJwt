@@ -1,0 +1,13 @@
+.app-logo {
+    height: 80px;
+}
+.app-header{
+    background-color: #222;
+    color: white;
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+}
+.app-title{
+    font-size: 1.5em;
+}
